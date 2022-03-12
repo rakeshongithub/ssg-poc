@@ -9,8 +9,13 @@ node_modules
 coverage
 
 # next.js
-.next/
+.next
 out/
+
+# storybook output folder
+storybook-output
+
+# production
 build
 
 # misc
@@ -29,5 +34,13 @@ yarn-error.log*
 .env.test.local
 .env.production.local
 
+#lock files
+yarn.lock
+package-lock.json
+pnpm-lock.yaml
+
 # turbo
 .turbo
+
+# Reports
+reports
