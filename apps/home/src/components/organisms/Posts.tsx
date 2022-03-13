@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 
 interface Item {
@@ -23,10 +24,12 @@ export default function Posts() {
       <div className="grid">
         {posts.map((item: Item) => {
           return (
-            <div className="card" key={item.id}>
-              <h3>{item.title}</h3>
-              <article>{item.body}</article>
-            </div>
+            <Link href={`posts/${item.id}`} passHref>
+              <div className="card" key={item.id}>
+                <h3>{item.title}</h3>
+                <article>{item.body}</article>
+              </div>
+            </Link>
           );
         })}
       </div>
