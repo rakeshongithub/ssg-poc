@@ -1,5 +1,5 @@
+import Link from 'next/link';
 import React from 'react';
-import Posts from '../components/organisms/Posts';
 
 export default function Home() {
   return (
@@ -11,7 +11,7 @@ export default function Home() {
 
       <main>
         <h1 className="title">SSG POC - POSTS</h1>
-        <Posts />
+        <Link href={'posts'} passHref>Posts</Link>
       </main>
 
       <style jsx>{`

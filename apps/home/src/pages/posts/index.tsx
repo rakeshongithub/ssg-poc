@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 interface Item {
   id: number;
@@ -7,17 +7,17 @@ interface Item {
   body: string;
 }
 
-export default function Posts() {
-  const [posts, setPosts] = useState([]);
+export async function getServerSideProps() {
+  const postsRes = await fetch('http://localhost:5002/posts');
+  const postData = await postsRes.json();
+  return {
+    props: {
+      posts: postData
+    }
+  };
+}
 
-  useEffect(() => {
-    const getPosts = async () => {
-      const postsRes = await fetch('http://localhost:5002/posts');
-      const postData = await postsRes.json();
-      setPosts(postData);
-    };
-    getPosts();
-  }, []);
+export default function Posts({posts}) {
 
   return (
     <>
