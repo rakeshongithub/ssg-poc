@@ -10,9 +10,7 @@ export default function Home() {
       </div>
 
       <main>
-        <h1 className="title">
-          SSG POC - POSTS
-        </h1>
+        <h1 className="title">SSG POC - POSTS</h1>
         <Posts />
       </main>
 
