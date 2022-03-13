@@ -17,8 +17,7 @@ export async function getServerSideProps() {
   };
 }
 
-export default function Posts({posts}) {
-
+export default function Posts({ posts }) {
   return (
     <>
       <div className="grid">

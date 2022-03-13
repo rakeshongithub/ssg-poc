@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 export async function getServerSideProps(context) {
   const postsRes = await fetch(`http://localhost:5002/posts/${context.query.id}`);
   const postData = await postsRes.json();
@@ -12,7 +11,7 @@ export async function getServerSideProps(context) {
   };
 }
 
-export default function PostDetail({post, postId}) {
+export default function PostDetail({ post, postId }) {
   return (
     <>
       <div>Post id - {postId}</div>
