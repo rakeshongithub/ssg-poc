@@ -7,7 +7,7 @@ interface Item {
   body: string;
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const postsRes = await fetch('http://localhost:5002/posts');
   const postData = await postsRes.json();
   return {
@@ -23,8 +23,8 @@ export default function Posts({ posts }) {
       <div className="grid">
         {posts.map((item: Item) => {
           return (
-            <Link href={`posts/${item.id}`} passHref>
-              <div className="card" key={item.id}>
+            <Link href={`posts/${item.id}`} passHref key={item.id}>
+              <div className="card">
                 <h3>{item.title}</h3>
                 <article>{item.body}</article>
               </div>
