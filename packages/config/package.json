@@ -4,7 +4,12 @@
   "main": "index.js",
   "license": "MIT",
   "files": [
-    "eslint-preset.js"
+    "*",
+    "eslint-preset.js",
+    "endpoint.js",
+    "jest/jest.config.js",
+    "jest/jest.setup.js",
+    "bundlesize.json"
   ],
   "dependencies": {
     "eslint-config-next": "^12.0.8",

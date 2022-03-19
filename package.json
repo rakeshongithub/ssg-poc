@@ -19,16 +19,18 @@
     "start": "turbo run start --parallel",
     "storybook:install": "cd storybook && yarn",
     "storybook:run": "cd storybook && yarn start-storybook",
-    "storybook:build": "cd storybook && yarn build-storybook"
+    "storybook:build": "cd storybook && yarn build-storybook",
+    "test": "turbo run test"
   },
   "devDependencies": {
-    "prettier": "^2.5.1",
-    "turbo": "latest",
     "@commitlint/cli": "^16.2.1",
     "@commitlint/config-angular": "^16.2.1",
     "@commitlint/prompt-cli": "^16.2.1",
     "@xt-pagesource/generate-plop": "^1.1.0",
-    "husky": "^4.3.8"
+    "husky": "^4.3.8",
+    "prettier": "^2.5.1",
+    "ts-jest": "^27.1.3",
+    "turbo": "latest"
   },
   "engines": {
     "npm": ">=7.0.0",
@@ -36,6 +38,7 @@
   },
   "packageManager": "yarn@1.22.10",
   "universal-react": {
+    "version": "0.10.0",
     "apps": [
       {
         "appType": "ssg",
