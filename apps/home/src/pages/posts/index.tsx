@@ -8,7 +8,7 @@ interface Item {
 }
 
 export async function getStaticProps() {
-  const postsRes = await fetch('http://localhost:5002/posts');
+  const postsRes = await fetch('https://jsonplaceholder.typicode.com/posts');
   const postData = await postsRes.json();
   return {
     props: {

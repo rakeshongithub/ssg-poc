@@ -1,7 +1,7 @@
 import React from 'react';
 
 export async function getStaticPaths() {
-  const allPostsRes = await fetch('http://localhost:5002/posts');
+  const allPostsRes = await fetch('https://jsonplaceholder.typicode.com/posts');
   const allPosts = await allPostsRes.json();
   return {
     paths: allPosts.map((item) => {
@@ -16,7 +16,9 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps(context) {
-  const postsRes = await fetch(`http://localhost:5002/posts/${context.params.id}`);
+  const postsRes = await fetch(
+    `https://jsonplaceholder.typicode.com/posts/${context.params.id}`
+  );
   const postData = await postsRes.json();
   return {
     props: {
