@@ -7,12 +7,11 @@ class MyDocument extends Document {
     return { ...initialProps };
   }
 
-  remoteUrl = `${process.env.MICRO_APP_URL}/remoteEntry.js`
-
   render() {
+    const remoteUrl = `${process.env.MICRO_APP_URL}/remoteEntry.js`;
     return (
       <Html lang="en">
-        <script src={this.remoteUrl} />
+        <script src={remoteUrl} />
         <Head />
         <body>
           <Main />
