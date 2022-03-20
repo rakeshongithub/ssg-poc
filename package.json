@@ -38,11 +38,16 @@
   },
   "packageManager": "yarn@1.22.10",
   "universal-react": {
-    "version": "0.10.0",
+    "version": "v0.11.0",
     "apps": [
       {
         "appType": "ssg",
         "appName": "home",
+        "optionalFeatures": []
+      },
+      {
+        "appType": "microApp",
+        "appName": "postDetail",
         "optionalFeatures": []
       }
     ],

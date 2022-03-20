@@ -11,7 +11,7 @@ export default function Home() {
 
       <main>
         <h1 className="title">SSG POC - POSTS</h1>
-        <Link href={'posts'} passHref>
+        <Link href={'/posts'} passHref>
           Posts
         </Link>
       </main>

@@ -10,6 +10,7 @@ class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
+        <script src="http://localhost:4001/remoteEntry.js" />
         <Head />
         <body>
           <Main />
