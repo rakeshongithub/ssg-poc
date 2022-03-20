@@ -26,7 +26,7 @@ const MF_CONFIG = {
   name: `postDetail`,
   remotes: {},
   exposes: {
-    './postView': './src/components/molecules/PostView',
+    './postView': './src/components/molecules/PostViews',
     './nav': './src/components/molecules/Nav'
   }
 };
