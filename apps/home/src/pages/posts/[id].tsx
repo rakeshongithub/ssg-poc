@@ -1,19 +1,13 @@
 import React from 'react';
-import dynamic from "next/dynamic";
+import dynamic from 'next/dynamic';
 
-const Nav = dynamic(
-  () => import('postDetail/nav'),
-  {
-    ssr: false
-  }
-);
+const Nav = dynamic(() => import('postDetail/nav'), {
+  ssr: false
+});
 
-const PostView = dynamic(
-  () => import('postDetail/postView'),
-  {
-    ssr: false
-  }
-);
+const PostView = dynamic(() => import('postDetail/postView'), {
+  ssr: false
+});
 
 export async function getStaticPaths() {
   const allPostsRes = await fetch(`${process.env.API_URL}/posts`);
